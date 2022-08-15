@@ -43,7 +43,10 @@ h1{
 
 input{
     width: 166px;
+    height: 20px;
     color: #000000;
+    border-radius: 5px;
+    
 }
 
 .locate p:first-child {
@@ -85,11 +88,22 @@ input[type=submit]{
 @media (max-width:500px){
 
     body{
-        background-color: #A5C9CA ;
+        background-color: #395B64 ;
     }
 
+    .form{
+        width: 350px;
+        height: 400px;
+        background-color: #395B64;
+        border-radius: 0px;
+        box-shadow: 2px 2px 2px #395B64;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+
     .container{
-    background-color: #A5C9CA ;
+    background-color: #395B64 ;
     width: 100vw;
     height: 80vh;
     margin: 0 auto;
