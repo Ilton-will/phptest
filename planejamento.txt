@@ -1,5 +1,5 @@
-*login
-*pagina de aconpamento
+*login - |quase finalizado V|
+*pagina de acompanhamento | em desenvolvimento ▀|
 
 
 *

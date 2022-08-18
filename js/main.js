@@ -1,0 +1,1 @@
+//window.onload(alert("Você caiu no conto da amoeba"))
