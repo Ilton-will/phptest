@@ -10,7 +10,7 @@ html, body{
 }
 
 .container{
-    background-color: #A5C9CA ;
+    background-color: #256D85 ;
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
@@ -30,9 +30,12 @@ h1{
 .form{
     width: 350px;
     height: 400px;
-    background-color: #395B64;
+    display: flex;
+    flex-direction: column;
+    background-color: #2B4865;
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 2px 2px 2px #000000;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     margin: 0 auto;
     text-align: center;
 }
@@ -41,17 +44,61 @@ h1{
     margin: 0 auto;
 }
 
-input{
-    width: 166px;
-    height: 20px;
-    color: #000000;
-    border-radius: 5px;
+.input-field{
+    position: relative;
+    padding-left: 25px;
+}
+
+form .input-field:first-child{
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    margin-left: 25px;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+}
+
+.input-field .underline::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    margin-left: 25px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg,#8FE3CF, #256D85);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    width: 200px;
+    color: rgba(240, 248, 255, 1);
+    background: #2B4865;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    
+    
+}
+.input-field input::placeholder {
+    color: rgba(240, 248, 255, 0.9);
     
 }
 
-.locate p:first-child {
-    margin-left: 3px;
-}
 
 input[type=submit]{
     width: 150px;
@@ -88,22 +135,22 @@ input[type=submit]{
 @media (max-width:500px){
 
     body{
-        background-color: #395B64 ;
+        background-color: #2B4865 ;
     }
 
     .form{
         width: 350px;
         height: 400px;
-        background-color: #395B64;
+        background-color: #2B4865;
         border-radius: 0px;
-        box-shadow: 2px 2px 2px #395B64;
+        box-shadow: 2px 2px 2px #2B4865;
         margin: 0 auto;
         text-align: center;
     }
     
 
     .container{
-    background-color: #395B64 ;
+    background-color: #2B4865 ;
     width: 100vw;
     height: 80vh;
     margin: 0 auto;
