@@ -104,7 +104,7 @@ input[type=submit]{
     width: 150px;
     height: 30px;
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: #2C3333;
     text-align: center;
     text-decoration: none;  
@@ -115,6 +115,9 @@ input[type=submit]{
     background-color: #E7F6F2;
     transition-duration: 0.4s;
     cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: #e7f6f2c5;
 }
 
 .login{
