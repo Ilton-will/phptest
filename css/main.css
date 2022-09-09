@@ -18,26 +18,107 @@ a{
 }
 .container{
     display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas: "h h"  "a m" "f f";
+}
+ 
+.container #nav.active {
     grid-template-columns: 1fr 8fr;
     grid-template-rows: 20vh 70vh 10vh;
-    grid-template-areas: "a h"  "a m" "a f";
+    grid-template-areas: "h h"  "a m" "f f";
 }
+
+/* começo header */
 
 .header{
     background-color: #002B5B;
     grid-area: h;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-content: center;
     padding: 20px
 }
 
-.sandwich {
+.logo{
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.sandwich-right{
+    margin: 50px 10px;
+}
+
+
+/* fim header */
+
+
+/* começo aside */
+
+.borda-esquerda{
     background: #2B4865; 
     grid-area: a;
 
 }
+
+.list {
+    display: none;
+}
+
+#nav.active .list{
+    display: flex;
+}
+
+.list {
+    flex-direction: column;    
+    justify-content: space-between;
+    padding-top: 20px;
+    height: 100px;
+}
+
+.slistas{
+    margin: 5px 10px;
+}
+
+#sandwich{
+    position: absolute;
+    opacity: 0;
+}
+label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #256D85;
+    transition: 0.25s ease-in-out;
+}
+
+
+label span:nth-child(1){
+    top: 0;
+}
+
+label span:nth-child(2){
+    top: 8px;
+}
+
+label span:nth-child(3){
+    top: 16px;
+}
+
+/* fim aside */
+
+
+/* começo main */
 
 main {
     
@@ -46,7 +127,19 @@ main {
     
 }
 
+.main-content {
+    width: 500px;
+    padding: 20px 80px;
+    margin: 0;
+}
+
+/* fim main */
+
+/* começo footer */
+
 footer{
     background: #002B5B;
     grid-area: f;
 }
+
+/* fim footer */
