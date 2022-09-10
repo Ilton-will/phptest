@@ -19,14 +19,12 @@ a{
 .container{
     display: grid;
     grid-template-columns: 1fr 10fr;
-    grid-template-rows: 20vh 70vh 10vh;
-    grid-template-areas: "h h"  "a m" "f f";
+    grid-template-rows: 20vh 80vh ;
+    grid-template-areas: "h h"  "a m";
 }
  
 .container #nav.active {
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: 20vh 70vh 10vh;
-    grid-template-areas: "h h"  "a m" "f f";
+   
 }
 
 /* começo header */
@@ -48,37 +46,6 @@ a{
 
 .sandwich-right{
     margin: 50px 10px;
-}
-
-
-/* fim header */
-
-
-/* começo aside */
-
-.borda-esquerda{
-    background: #2B4865; 
-    grid-area: a;
-
-}
-
-.list {
-    display: none;
-}
-
-#nav.active .list{
-    display: flex;
-}
-
-.list {
-    flex-direction: column;    
-    justify-content: space-between;
-    padding-top: 20px;
-    height: 100px;
-}
-
-.slistas{
-    margin: 5px 10px;
 }
 
 #sandwich{
@@ -114,6 +81,76 @@ label span:nth-child(2){
 label span:nth-child(3){
     top: 16px;
 }
+
+
+.pesquisa {
+    margin: auto;
+    width: 50%;
+    clear: both;
+    text-align: center;
+    
+}
+
+.pesquisa input {
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    
+}
+
+
+.icon{
+    width: 90px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#config-but{
+    position: absolute;
+    opacity: 0;
+}
+
+.icon img{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* fim header */
+
+
+/* começo aside */
+
+.borda-esquerda{
+    background: #2B4865; 
+    grid-area: a;
+
+}
+
+.list {
+    display: none;
+}
+
+#nav.active .list{
+    display: flex;
+}
+
+.list {
+    flex-direction: column;    
+    justify-content: space-between;
+    padding-top: 20px;
+    height: 100px;
+}
+
+.slistas{
+    margin: 5px 10px;
+}
+
 
 /* fim aside */
 
